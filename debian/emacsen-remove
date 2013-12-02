@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+FLAVOR=$1
+PACKAGE=tei-emacs
+
+if [ ${FLAVOR} != emacs ]; then
+    echo remove/${PACKAGE}: purging byte-compiled files for ${FLAVOR}
+    rm -rf /usr/share/${FLAVOR}/site-lisp/${PACKAGE}
+    rm -rf /usr/share/${FLAVOR}/site-lisp/ucs
+fi
+rm -rf /usr/share/emacs/site-lisp/ucs/*elc

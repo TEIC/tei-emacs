@@ -1,0 +1,14 @@
+Source: tei-emacs
+Section: web
+Priority: optional
+Maintainer: Sebastian Rahtz <sebastian.rahtz@oucs.ox.ac.uk>
+Build-Depends: debhelper (>> 3.0.0)
+Standards-Version: 3.5.2
+
+Package: tei-emacs
+Architecture: all
+Pre-Depends: emacs23
+Depends: tei-p5-xsl2,tei-p5-xslprofiles,tei-p5-schema,tei-p5-exemplars
+Suggests: xslt-process, xslide, psgml
+Description: Text Encoding Initiative Emacs setup
+ A bundle of stuff for editing TEI XML using Emacs

@@ -1,0 +1,19 @@
+<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+  <uri resource="foo.xml" uri="../../../../../../../usr/share/xml/tei/custom/schema/relaxng/tei_ms.rnc"/>
+  <include rules="/usr/share/emacs/site-lisp/nxml-mode/schema/schemas.xml"/>
+
+  <typeId id="TEIP5Lite" uri="/usr/share/xml/tei/custom/schema/relaxng/tei_lite.rnc"/>
+
+  <typeId id="ODD" uri="/usr/share/xml/tei/custom/schema/relaxng/tei_odds.rnc"/>
+
+  <uri pattern="*.odd" typeId="ODD"/>
+
+  <namespace ns="http://www.tei-c.org/ns/1.0" typeId="TEIP5Lite"/>
+
+  <documentElement prefix="" localName="TEI" typeId="TEIP5Lite"/>
+
+  <transformURI fromPattern=".xml" toPattern=".rnc"/>
+
+  <applyFollowingRules ruleType="uri"/>
+
+</locatingRules>

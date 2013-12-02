@@ -1,0 +1,15 @@
+;; -*-emacs-lisp-*-
+;;
+;; Emacs startup file for the Debian tei-emacs package
+;;
+;; The tei-emacs package follows the Debian/GNU Linux 'emacsen' policy and
+;; byte-compiles its elisp files for each 'emacs flavor' (emacs19,
+;; xemacs19, emacs20, xemacs20...).  The compiled code is then
+;; installed in a subdirectory of the respective site-lisp directory.
+(setq teiemacsdir "/usr/share/tei-emacs")
+(setq teiemacslispdir "/usr/share/emacs/site-lisp/tei-emacs")
+(setq teidocdir "/usr/share/doc/tei")
+(setq teixmldir "/usr/share/xml/tei")
+(setq teisgmldir "/usr/share/sgml/tei")
+(require 'cl)
+(load-library "tei-emacs-init")
